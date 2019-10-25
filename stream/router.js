@@ -11,7 +11,7 @@ router.get('/stream', async (req, res) => {
 
     const messages = await Chatroom.findAll()
     const data = JSON.stringify(messages)
-    console.log("messages in db:", data)
+    // console.log("messages in db:", data)
     stream.updateInit(data)
     stream.init(req, res)
 })
