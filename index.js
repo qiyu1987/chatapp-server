@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors')
 
 const streamRouter = require('./stream/router')
+const userRouter = require('./user/router')
 
 const app = express()
 const port = process.env.Port || 5000
@@ -18,3 +19,4 @@ app.get('/', (req, res) => {
 })
 
 app.use(streamRouter)
+app.use(userRouter)
